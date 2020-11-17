@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../static/logo.png">
         
-        <title>我处理的流程 - M&OAS DOCS</title>
+        <title>角色管理 - M&OAS DOCS</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                             <li class="navitem">
                                 <a href=../2-1/index.html class="nav-link">Dashboard</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">流程处理 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -50,7 +50,7 @@
 </li>
                                     
 <li>
-    <a href=./index.html class="dropdown-item active">我处理的流程</a>
+    <a href=../3-2/index.html class="dropdown-item">我处理的流程</a>
 </li>
                                 </ul>
                             </li>
@@ -76,7 +76,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">人事管理 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -85,7 +85,7 @@
 </li>
                                     
 <li>
-    <a href=../6-3/index.html class="dropdown-item">角色管理</a>
+    <a href=./index.html class="dropdown-item active">角色管理</a>
 </li>
                                     
 <li>
@@ -141,12 +141,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=../3-1/index.html class="nav-link">
+                                <a rel="prev" href=../6-1/index.html class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href=../4-1/index.html class="nav-link">
+                                <a rel="next" href=../6-2/index.html class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -168,7 +168,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#moas" class="nav-link">M&amp;OAS 我处理的流程</a>
+            <li class="nav-item" data-level="1"><a href="#moas" class="nav-link">M&amp;OAS 角色管理</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -179,12 +179,13 @@
 
 <script src="../static/doc.js"></script>
 
-<h1 id="moas"><h1 class="borderWrap">M&amp;OAS 我处理的流程</h1></h1>
-<p>该界面展示所提交的流程流转到当前登录账户，需要当前账户审批的流程列表。</p>
-<p>检索框可以检索数据 ID 或者流程标题，以及流程状态。</p>
-<p>你可以自定义对流程类型进行声明，你需要修改模型类 <code>ProcessModel</code> 的相关数据，并确保相关属性可用，推荐你使用追加的方式，而不是修改。</p>
-<p><img alt="" src="../static/M0007.png" /></p>
-<p><img alt="" src="../static/M0008.png" /></p></div>
+<h1 id="moas"><h1 class="borderWrap">M&amp;OAS 角色管理</h1></h1>
+<p>用户在关联角色的情况下使用的是当前用户角色中的访问权限。</p>
+<p>用户在没有关联角色的情况下将只能访问 Dashboard 的界面，这是默认的。</p>
+<p>角色权限编辑的界面，Dashboard 的权限也是默认授予的，后台服务将不对这个参数进行获取和检验赋值，因为这是默认行为。</p>
+<p>默认生成的 <code>系统管理</code> 角色将不允许编辑和删除，你可以对其他自新增的数据进行自定义权限编辑，你的更新将会直接同步到关联的所有用户。</p>
+<p><img alt="" src="../static/M0025.png" /></p>
+<p><img alt="" src="../static/M0026.png" /></p></div>
             </div>
         </div>
 

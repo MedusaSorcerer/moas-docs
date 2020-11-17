@@ -1,3 +1,6 @@
+let initial;
+let scrollTop;
+
 window.onload = function () {
     let medusa = document.createElement('div');
     medusa.setAttribute('class', 'medusa');
@@ -15,17 +18,25 @@ window.onload = function () {
 }
 
 function clickAction(img) {
-    let medusa = document.createElement('div');
-    medusa.setAttribute('id', 'imgBaseDiv');
-    medusa.setAttribute('onclick', 'closeImg()');
-    let image = document.createElement('img');
-    image.setAttribute('src', img.src);
-    medusa.appendChild(image);
-    document.body.appendChild(medusa);
+    let body = document.getElementsByTagName('body')[0];
+    initial = body.innerHTML;
+    scrollTop = document.documentElement.scrollTop;
+    body.innerHTML = '<img id="M-img" onclick="closeImg()" style="' +
+        '-webkit-user-select: none;' +
+        'margin: auto;' +
+        'display: flex;' +
+        'justify-content: center;' +
+        'align-items: center;' +
+        'vertical-align: middle;' +
+        'border: double;' +
+        'border-color: red;' +
+        'border-width: 8px;' +
+        '" src="' + img.src + '">';
 }
 
 function closeImg() {
-    document.getElementById('imgBaseDiv').remove();
+    document.getElementsByTagName('body')[0].innerHTML = initial;
+    document.documentElement.scrollTop = scrollTop;
 }
 
 function goTop() {
